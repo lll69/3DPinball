@@ -227,7 +227,7 @@
         <div class=emscripten>
             <progress hidden id=progress max=100 value=0></progress>
             <br>
-            <progress hidden id=progressWasm max=100 value=0></progress>
+            <progress hidden id=progressWasm max=4539452 value=0></progress>
         </div>
         <div id=playarea>
             <canvas class=emscripten id=canvas oncontextmenu=event.preventDefault() style=display:none
@@ -309,8 +309,9 @@
     <script>
         function setWasmStatus(e) {
             console.log(e);
-            progressWasmElement.value = 100 * e.loaded;
-            progressWasmElement.max = 100 * e.total;
+            progressWasmElement.value = 1 * e.loaded;
+            if(e.total>1)
+            progressWasmElement.max = 1 * e.total;
         }
     </script>
     <script async src=SpaceCadetPinball.js></script>
