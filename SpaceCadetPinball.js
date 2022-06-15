@@ -1160,7 +1160,7 @@ function createWasm() {
         })
     }
     function instantiateAsync() {
-        if (!wasmBinary && typeof WebAssembly.instantiateStreaming === "function" && !isDataURI(wasmBinaryFile) && !isFileURI(wasmBinaryFile) && typeof fetch === "function") {
+        if (!wasmBinary && typeof WebAssembly.instantiateStreaming === "fun" && !isDataURI(wasmBinaryFile) && !isFileURI(wasmBinaryFile) && typeof fetch === "function") {
             return fetch(wasmBinaryFile, {
                 credentials: "same-origin"
             }).then(function(response) {
