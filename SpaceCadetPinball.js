@@ -653,6 +653,7 @@ if (ENVIRONMENT_IS_NODE) {
             }
             ;
             xhr.onerror = onerror;
+            console.log(onprogress);
             xhr.onprogress = onprogress;
             xhr.send(null)
         }
